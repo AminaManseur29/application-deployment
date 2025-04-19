@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ensae-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/AminaManseur29/application-deployment.git
+    targetRevision: main
+    path: deployment
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: user-amanseur
+  syncPolicy:
+    automated:
+      selfHeal: true
