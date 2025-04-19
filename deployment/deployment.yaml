@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: streamlit
-        image: amanseur/mise_en_prod_projet:latest
+        image: amanseur/mise_en_prod_projet:v0.0.3
         ports:
         - containerPort: 8501
